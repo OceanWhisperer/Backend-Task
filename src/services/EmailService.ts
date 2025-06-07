@@ -128,7 +128,7 @@ export class EmailService {
   }
 
   private calculateExponentialBackoff(attemptNumber: number): number {
-    // Exponential backoff: 1s, 2s, 4s, 8s...
+    // Exponential backoff. Delays 1s, 2s, 4s, 8s...
     return this.baseDelay * Math.pow(2, attemptNumber);
   }
 
